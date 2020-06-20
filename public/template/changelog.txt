@@ -1,0 +1,10 @@
+Version: 2.1.0
+  - Updated the hero waves effect to use native CSS animations instead of third party libraries
+
+Version: 2.0.0
+  - The template was rebuilt from scratch with the latest Bootstrap version (4.4.1)
+  - Added SMPTP support for the contact form script (Pro)
+  - Added NodeJS NPM Development version (Pro unlimited & Membership members)
+  
+Version: 1.0.0
+  - Initial Release

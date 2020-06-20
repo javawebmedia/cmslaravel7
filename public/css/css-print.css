@@ -1,0 +1,252 @@
+/* CSS Document */
+body {
+  background: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body, page {
+    margin: 0;
+    box-shadow: 0;
+}
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+}
+h1 {
+  font-size: 14px !important;
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h4.box-title {
+  color: #000;
+  text-decoration: none;
+  border-bottom: solid thin #666;
+  font-size: 14px;
+  width: 100%;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+/* page */
+
+  page[size="A4"] {  
+    width: 21cm;
+    min-height: 29.7cm; 
+  }
+  page[size="A4"][layout="portrait"] {
+    width: 21cm;
+    min-height: 29.7cm;
+    height: auto;
+  }
+  page[size="A4"][layout="landscape"] {
+    width: 29.7cm;
+    min-height: 21cm;
+    height: auto;
+  }
+  page[size="A3"] {
+    width: 29.7cm;
+    height: 42cm;
+  }
+  page[size="A3"][layout="portrait"] {
+    width: 42cm;
+    min-height: 29.7cm;
+    height: auto; 
+  }
+  page[size="A3"][layout="landscape"] {
+    width: 42cm;
+    min-height: 29.7cm;
+    height: auto; 
+  }
+  /* Kertas A2 */
+  page[size="A2"] {
+    width: 42cm;
+    height: 59.8cm;
+  }
+  page[size="A2"][layout="portrait"] {
+    width: 59.8cm;
+    min-height: 42cm;
+    height: auto; 
+  }
+
+  page[size="A5"] {
+    width: 14.8cm;
+    height: 21cm;
+  }
+  page[size="A5"][layout="portrait"] {
+    height: 21cm;
+    width: 14.8cm;  
+  }
+  /* Table */
+table {
+  width: 100%;
+}
+/* tabel header */
+table.header {
+  text-align: left !important;
+  font-size: 12px;
+  margin-bottom: 5mm;
+  padding: 5px;
+}
+.header img {
+  max-width: 100px;
+}
+.header h2 {
+  margin-bottom:0;
+}
+table.header, .header td, .header th, .header th h1 {
+  text-align: left !important;
+  border: solid 1px #eee;
+  border-collapse: collapse;
+  padding: 5px;
+  vertical-align: top !important;
+}
+.header td .tengah {
+  text-align: center;
+  vertical-align: central;
+  font-size: 24px !important;
+  font-weight: bold;
+}
+/* cetak */
+.cetak {
+  padding: 0.5cm;
+}
+.cetak .bawah {
+  margin-top: 30px;
+  border-bottom: 10px;
+  text-align: left;
+  position: absolute;
+  font-size: 10px;
+}
+.setengah {
+  width: 12.6cm;
+}
+/* printer */
+table.printer {
+  border: solid 2px #000;
+  border-collapse:collapse;
+  font-size: 11px;
+  margin-bottom: 2mm;
+}
+.abu, .bg-gray {
+  background-color: #eee;
+}
+.printer th {
+  background-color: #EEE;
+  text-align: left !important;
+  text-transform: capitalize;
+}
+.printer th, .printer td {
+  border: solid 1px #000;
+  padding: 1mm 2mm;
+}
+.printer td {
+  vertical-align: top;
+}
+tr.text-center {
+  text-align: center;
+  vertical-align: top;
+}
+.bg-dark {
+  background-color: #999;
+}
+hr {
+  margin: 1mm 0;
+}
+h3 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 12px;
+}
+tr.tengah {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-center, td.text-center, th.text-center {
+  text-align: center !important;
+}
+.text-strong, td.text-strong {
+  font-weight: bold !important;
+}
+tr.kiri {
+  text-align: left;
+  vertical-align: top;
+}
+td.center {
+  text-align: center !important;
+  max-width: 2cm;
+}
+tr.kiri td {
+  padding: 2mm;
+  }`
+  /* Tabel atas */
+  table.atas {
+    margin-top: 0mm;
+    text-transform: uppercase;
+  }
+  .atas tr, .atas td {
+    border-bottom: dotted thin #f5f5f5;
+    text-align: right;
+    vertical-align: bottom;
+    padding: 2mm 3mm;
+    height: 4mm;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  /* tabel bawah */
+  table.bawah {
+    margin-left: 4cm;
+    margin-top: 1mm;
+    width: 8.5cm;
+    text-transform: uppercase;
+  }
+  .bawah tr, .bawah td {
+    border-bottom: dotted thin #f5f5f5;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 2mm 3mm;
+    height: 4mm;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  td.perihal {
+    height: 1.3cm;
+    vertical-align: top !important;
+  }
+  td.index {
+    width: 3cm;
+  }
+  td.bg-primary, td.bg-danger {
+    background-color: #EEE !important;
+    color: #000;
+    font-weight: bold;
+  }
+  td.bg-info, tr.bginfo {
+    background-color: #80ccff;
+  }
+  td.bg-primary,  tr.bginfo, td.bg-danger {
+    background-color: #EEE !important;
+    color: #000;
+    font-weight: bold;
+  }
+  td.bg-info, tr.bginfo {
+    background-color: #80ccff;
+  }
+  td, th {
+    -webkit-print-color-adjust: exact; 
+  }
+/* Rahasia */
+.rahasia {
+    padding: 5px;
+    border: 2px solid black;
+    width: 4cm;
+    float: right;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
