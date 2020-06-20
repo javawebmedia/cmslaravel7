@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 20, 2020 at 08:25 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Host: localhost:3306
+-- Generation Time: Jun 20, 2020 at 01:52 PM
+-- Server version: 5.7.30
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `belajar_laravel`
+-- Database: `javaweb1_educa`
 --
 
 -- --------------------------------------------------------
@@ -47,7 +47,7 @@ CREATE TABLE `berita` (
   `tanggal_selesai` date DEFAULT NULL,
   `tanggal_post` datetime NOT NULL,
   `tanggal_publish` datetime NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -77,11 +77,11 @@ CREATE TABLE `download` (
   `id_user` int(11) NOT NULL,
   `judul_download` varchar(200) DEFAULT NULL,
   `jenis_download` varchar(20) NOT NULL,
-  `isi` text DEFAULT NULL,
+  `isi` text,
   `gambar` varchar(255) NOT NULL,
   `website` varchar(255) DEFAULT NULL,
   `hits` int(11) NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -104,14 +104,14 @@ CREATE TABLE `galeri` (
   `id_user` int(11) NOT NULL,
   `judul_galeri` varchar(200) DEFAULT NULL,
   `jenis_galeri` varchar(20) NOT NULL,
-  `isi` text DEFAULT NULL,
+  `isi` text,
   `gambar` varchar(255) NOT NULL,
   `website` varchar(255) DEFAULT NULL,
   `hits` int(11) DEFAULT NULL,
   `popup_status` enum('Publish','Draft','','') NOT NULL,
   `urutan` int(11) DEFAULT NULL,
   `status_text` enum('Ya','Tidak','','') NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -134,9 +134,9 @@ CREATE TABLE `gambar_produk` (
   `id_produk` int(11) NOT NULL,
   `nama_gambar_produk` varchar(255) DEFAULT NULL,
   `gambar` varchar(255) NOT NULL,
-  `keterangan` text DEFAULT NULL,
+  `keterangan` text,
   `urutan` int(11) DEFAULT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `kategori` (
   `nama_kategori` varchar(255) NOT NULL,
   `urutan` int(11) DEFAULT NULL,
   `hits` int(11) NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -224,9 +224,9 @@ CREATE TABLE `kategori_produk` (
   `nama_kategori_produk` varchar(200) NOT NULL,
   `slug_kategori_produk` varchar(200) NOT NULL,
   `urutan` int(11) NOT NULL,
-  `keterangan` text DEFAULT NULL,
+  `keterangan` text,
   `gambar` varchar(255) DEFAULT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -250,19 +250,19 @@ CREATE TABLE `konfigurasi` (
   `nama_singkat` varchar(20) DEFAULT NULL,
   `tagline` varchar(200) DEFAULT NULL,
   `tagline2` varchar(255) DEFAULT NULL,
-  `tentang` text DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL,
+  `tentang` text,
+  `deskripsi` text,
   `website` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `email_cadangan` varchar(255) DEFAULT NULL,
-  `alamat` text DEFAULT NULL,
+  `alamat` text,
   `telepon` varchar(50) DEFAULT NULL,
   `hp` varchar(50) DEFAULT NULL,
   `fax` varchar(50) DEFAULT NULL,
   `logo` varchar(255) DEFAULT NULL,
   `icon` varchar(255) DEFAULT NULL,
   `keywords` varchar(400) DEFAULT NULL,
-  `metatext` text DEFAULT NULL,
+  `metatext` text,
   `facebook` varchar(255) DEFAULT NULL,
   `twitter` varchar(255) DEFAULT NULL,
   `instagram` varchar(255) DEFAULT NULL,
@@ -272,7 +272,7 @@ CREATE TABLE `konfigurasi` (
   `nama_instagram` varchar(255) NOT NULL,
   `nama_google_plus` varchar(255) NOT NULL,
   `singkatan` varchar(255) NOT NULL,
-  `google_map` text DEFAULT NULL,
+  `google_map` text,
   `judul_1` varchar(200) DEFAULT NULL,
   `pesan_1` varchar(200) DEFAULT NULL,
   `judul_2` varchar(200) DEFAULT NULL,
@@ -297,19 +297,19 @@ CREATE TABLE `konfigurasi` (
   `link_4` varchar(255) DEFAULT NULL,
   `link_5` varchar(255) DEFAULT NULL,
   `link_6` varchar(255) DEFAULT NULL,
-  `javawebmedia` text DEFAULT NULL,
+  `javawebmedia` text,
   `gambar` varchar(255) DEFAULT NULL,
   `video` varchar(255) DEFAULT NULL,
-  `rekening` text DEFAULT NULL,
-  `prolog_topik` text DEFAULT NULL,
-  `prolog_program` text DEFAULT NULL,
-  `prolog_sekretariat` text DEFAULT NULL,
-  `prolog_aksi` text DEFAULT NULL,
-  `prolog_kolaborasi` text DEFAULT NULL,
-  `prolog_sebaran` text DEFAULT NULL,
+  `rekening` text,
+  `prolog_topik` text,
+  `prolog_program` text,
+  `prolog_sekretariat` text,
+  `prolog_aksi` text,
+  `prolog_kolaborasi` text,
+  `prolog_sebaran` text,
   `gambar_berita` varchar(255) DEFAULT NULL,
-  `prolog_agenda` text DEFAULT NULL,
-  `prolog_wawasan` text DEFAULT NULL,
+  `prolog_agenda` text,
+  `prolog_wawasan` text,
   `protocol` varchar(255) DEFAULT NULL,
   `smtp_host` varchar(255) DEFAULT NULL,
   `smtp_port` varchar(255) DEFAULT NULL,
@@ -317,13 +317,13 @@ CREATE TABLE `konfigurasi` (
   `smtp_user` varchar(255) DEFAULT NULL,
   `smtp_pass` varchar(255) DEFAULT NULL,
   `judul_pembayaran` varchar(255) DEFAULT NULL,
-  `isi_pembayaran` text DEFAULT NULL,
+  `isi_pembayaran` text,
   `gambar_pembayaran` varchar(255) DEFAULT NULL,
   `link_bawah_peta` varchar(255) DEFAULT NULL,
   `text_bawah_peta` varchar(255) NOT NULL,
   `cara_pesan` enum('Keranjang Belanja','Formulir Pemesanan') NOT NULL,
   `id_user` int(11) NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -366,9 +366,9 @@ CREATE TABLE `pemesanan` (
   `pengirim` varchar(255) DEFAULT NULL,
   `nama_bank_pengirim` varchar(255) DEFAULT NULL,
   `nomor_rekening_pengirim` varchar(255) DEFAULT NULL,
-  `keterangan` text DEFAULT NULL,
+  `keterangan` text,
   `tanggal_post` datetime NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -400,7 +400,7 @@ CREATE TABLE `produk` (
   `status_produk` varchar(20) NOT NULL,
   `satuan` varchar(255) DEFAULT NULL,
   `urutan` int(11) DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL,
+  `deskripsi` text,
   `isi` text NOT NULL,
   `harga_jual` int(11) DEFAULT NULL,
   `harga_beli` int(11) DEFAULT NULL,
@@ -419,7 +419,7 @@ CREATE TABLE `produk` (
   `ukuran` varchar(255) DEFAULT NULL,
   `hits` bigint(20) DEFAULT NULL,
   `tanggal_post` datetime NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -444,7 +444,7 @@ CREATE TABLE `rekening` (
   `atas_nama` varchar(255) NOT NULL,
   `gambar` varchar(255) NOT NULL,
   `urutan` int(11) DEFAULT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -472,7 +472,7 @@ CREATE TABLE `users` (
   `akses_level` varchar(20) NOT NULL,
   `kode_rahasia` varchar(255) DEFAULT NULL,
   `gambar` varchar(255) DEFAULT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -480,7 +480,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama`, `email`, `username`, `password`, `akses_level`, `kode_rahasia`, `gambar`, `tanggal`) VALUES
-(4, 'Andoyo Cakep', 'javawebmedia@gmail.com', 'andoyo', '1ac1f34abe8fcced2ab68edfd4418405f8cc47ce', 'Admin', NULL, 'testimonials-1.jpg', '2020-05-20 22:33:42'),
+(4, 'Andoyo Cakep', 'javawebmedia@gmail.com', 'javawebmedia', 'dc28d4424ece38803650f440d7eb1cb2b3fb6651', 'Admin', NULL, 'testimonials-1.jpg', '2020-06-20 06:51:42'),
 (14, 'Eflita Meiyetriani', 'eflita@gmail.com', 'eflita', '4228f9df60d56e866971c15271382b9f10251ce0', 'Admin', NULL, NULL, '2020-06-11 23:17:42');
 
 -- --------------------------------------------------------
@@ -493,12 +493,12 @@ CREATE TABLE `video` (
   `id_video` int(11) NOT NULL,
   `judul` varchar(200) NOT NULL,
   `posisi` varchar(20) NOT NULL,
-  `keterangan` text DEFAULT NULL,
+  `keterangan` text,
   `video` text NOT NULL,
   `urutan` int(11) DEFAULT NULL,
   `bahasa` varchar(20) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
