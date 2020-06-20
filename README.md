@@ -1,3 +1,8 @@
+# Deskripsi Ringkas
+Untuk yang sedang belajar Laravel 7, selamat ya. Kali ini Java Web Media akan membagikan salah satu sample source code website Company Profile dari siswa yang sedang belajar di Java Web Media.
+
+Website ini dilengkapi dengan fasilitas halaman front end dan back end. Front end adalah halaman website yang dikunjungi oleh pengunjung website, sedangkan back end adalah untuk mengelola konten oleh Administrator.
+
 # Installasi Lengkap
 Silakan buka situs http://javawebmedia.com/blog/source-code-gratis-website-company-profile-dengan-laravel-7 untuk petunjuk cara installasi.
 
@@ -18,3 +23,26 @@ Silakan buka situs http://javawebmedia.com/blog/source-code-gratis-website-compa
 
 # Demo Website
 - Silakan buka https://educamedia.id
+
+# Fitur Front End
+Homepage dengan image slider
+Halaman berita
+Halaman produk
+Halaman profil
+Halaman pemesanan produk
+Halaman galeri gambar
+Halaman galeri video
+Halaman unduhan/download
+Hhalaman kontak
+
+# Fitur Back End
+Halaman login administrator
+Halaman Dashboard
+Halaman untuk mengelola berita
+Halaman untuk mengelola produk
+Halaman untuk mengelola profil
+Halaman untuk mengelola pemesanan produk
+Halaman untuk mengelola galeri gambar
+Halaman untuk mengelola galeri video
+Halaman untuk mengelola unduhan/download
+Halaman konfigurasi website
