@@ -15,3 +15,6 @@ Silakan buka situs http://javawebmedia.com/blog/source-code-gratis-website-compa
 - Rename file file .env.example menjadi .env (atau Anda membuat file .env baru dan Copy lalu Paste isi konten .env.example ke file .env tersebut)
 - Ekstrak file vendor.zip di dalam folder cmslaravel7
 - Buka browser Anda dan ketikkan alamat URL nya, misalnya: http://localhost/cmslaravel7 atau http://alamatwebsitemu.com.
+
+# Demo Website
+- Silakan buka https://educamedia.id
