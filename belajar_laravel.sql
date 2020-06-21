@@ -48,7 +48,7 @@ CREATE TABLE `berita` (
   `tanggal_post` datetime NOT NULL,
   `tanggal_publish` datetime NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `berita`
@@ -82,7 +82,7 @@ CREATE TABLE `download` (
   `website` varchar(255) DEFAULT NULL,
   `hits` int(11) NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `download`
@@ -112,7 +112,7 @@ CREATE TABLE `galeri` (
   `urutan` int(11) DEFAULT NULL,
   `status_text` enum('Ya','Tidak','','') NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `galeri`
@@ -137,7 +137,7 @@ CREATE TABLE `gambar_produk` (
   `keterangan` text,
   `urutan` int(11) DEFAULT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gambar_produk`
@@ -160,7 +160,7 @@ CREATE TABLE `kategori` (
   `urutan` int(11) DEFAULT NULL,
   `hits` int(11) NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kategori`
@@ -182,7 +182,7 @@ CREATE TABLE `kategori_download` (
   `slug_kategori_download` varchar(255) NOT NULL,
   `nama_kategori_download` varchar(255) NOT NULL,
   `urutan` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kategori_download`
@@ -203,7 +203,7 @@ CREATE TABLE `kategori_galeri` (
   `slug_kategori_galeri` varchar(255) NOT NULL,
   `nama_kategori_galeri` varchar(255) NOT NULL,
   `urutan` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kategori_galeri`
@@ -227,7 +227,7 @@ CREATE TABLE `kategori_produk` (
   `keterangan` text,
   `gambar` varchar(255) DEFAULT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kategori_produk`
@@ -324,7 +324,7 @@ CREATE TABLE `konfigurasi` (
   `cara_pesan` enum('Keranjang Belanja','Formulir Pemesanan') NOT NULL,
   `id_user` int(11) NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `konfigurasi`
@@ -369,7 +369,7 @@ CREATE TABLE `pemesanan` (
   `keterangan` text,
   `tanggal_post` datetime NOT NULL,
   `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemesanan`
@@ -420,7 +420,7 @@ CREATE TABLE `produk` (
   `hits` bigint(20) DEFAULT NULL,
   `tanggal_post` datetime NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `produk`
@@ -445,7 +445,7 @@ CREATE TABLE `rekening` (
   `gambar` varchar(255) NOT NULL,
   `urutan` int(11) DEFAULT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rekening`
@@ -473,7 +473,7 @@ CREATE TABLE `users` (
   `kode_rahasia` varchar(255) DEFAULT NULL,
   `gambar` varchar(255) DEFAULT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
@@ -499,7 +499,7 @@ CREATE TABLE `video` (
   `bahasa` varchar(20) NOT NULL,
   `id_user` int(11) NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `video`
